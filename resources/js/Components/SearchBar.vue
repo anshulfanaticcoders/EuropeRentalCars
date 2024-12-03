@@ -103,11 +103,11 @@ const sameLocation = ref(true);
             </div>
 
             <div class="inner-col flex justify-end">
-                <button
-                    class="bg-customPrimaryColor text-customPrimaryColor-foreground rounded-[40px] w-[138px] py-4"
+                <Link href="listing"
+                    class="bg-customPrimaryColor text-customPrimaryColor-foreground rounded-[40px] w-[138px] py-4 text-center"
                 >
-                    <Link href=""> Search </Link>
-                </button>
+                    Search 
+                </Link>
             </div>
         </form>
     </div>

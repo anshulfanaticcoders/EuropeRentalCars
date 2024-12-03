@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Button } from "@/Components/ui/button";
+import { Head } from '@inertiajs/vue3';
 import {
     Form,
     FormControl,

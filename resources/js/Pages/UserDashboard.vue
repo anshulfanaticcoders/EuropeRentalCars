@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Badge } from '@/Components/ui/badge'
+import { Head } from '@inertiajs/vue3';
 
 import { Button } from '@/Components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/Components/ui/card'
@@ -10,6 +11,8 @@ import { Bell, CircleUser, Home, LineChart, Menu, Package, Package2, Search, Sho
 </script>
 
 <template>
+
+  <Head title="User Dashboard" />
     <main>
     <div class="container py-customVerticalSpacing">
   <div class="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">

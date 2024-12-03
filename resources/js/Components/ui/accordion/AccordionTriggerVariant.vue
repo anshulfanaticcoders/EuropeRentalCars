@@ -37,3 +37,10 @@ const delegatedProps = computed(() => {
     </AccordionTrigger>
   </AccordionHeader>
 </template>
+
+<style>
+.\[\&\[data-state\=open\]\>svg\]\:rotate-180[data-state=open]>svg{
+  background-color: #153B4F;
+  color: white ;
+}
+</style>

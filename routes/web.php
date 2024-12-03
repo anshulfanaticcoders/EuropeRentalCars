@@ -35,11 +35,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Page routes
 Route::inertia('signup','Signup');
 Route::inertia('/','Welcome');
 Route::inertia('login','Login');
 Route::inertia('singlecar','SingleCar');
 Route::inertia('userdashboard','UserDashboard');
+Route::inertia('listing','Listing');
 
 
 require __DIR__.'/auth.php';

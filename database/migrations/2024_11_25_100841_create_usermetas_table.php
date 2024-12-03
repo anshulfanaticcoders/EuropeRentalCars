@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('usermetas', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->text('user_role')->default('customer');
+            $table->text('user_role');
             $table->boolean('approved')->default(false);
             $table->text('country')->nullable();
             $table->text('address')->nullable();
