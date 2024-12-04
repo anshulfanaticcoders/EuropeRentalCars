@@ -18,6 +18,7 @@ import OffcanvasMenu from "./OffcanvasMenu.vue";
                 Create an account
             </button>
         </Link>
+        
         <OffcanvasMenu/>
     </div>
     </div>

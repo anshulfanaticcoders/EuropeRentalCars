@@ -36,11 +36,9 @@ Route::middleware('auth')->group(function () {
 });
 
 // Page routes
-Route::inertia('signup','Signup');
 Route::inertia('/','Welcome');
 Route::inertia('login','Login');
 Route::inertia('singlecar','SingleCar');
-Route::inertia('userdashboard','UserDashboard');
 Route::inertia('listing','Listing');
 
 

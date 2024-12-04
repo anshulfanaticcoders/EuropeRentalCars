@@ -30,23 +30,42 @@ class RegisteredUserController extends Controller
      * @throws \Illuminate\Validation\ValidationException
      */
     public function store(Request $request): RedirectResponse
-    {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|lowercase|email|max:255|unique:'.User::class,
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
+{
+    // Debug the incoming request to verify all fields are being sent
+    // dd($request->all());
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+    $validatedData = $request->validate([
+        'first_name' => 'nullable|string|max:255',
+        'last_name' => 'nullable|string|max:255',
+        'date_of_birth' => 'nullable|date',
+        'phone_number' => 'nullable|string|max:15',
+        'email' => 'required|string|email|max:255|unique:users',
+        'address' => 'nullable|string|max:255',
+        'postcode' => 'nullable|string|max:10',
+        'city' => 'nullable|string|max:255',
+        'country' => 'nullable|string|max:255',
+        'password' => ['required', 'confirmed', \Illuminate\Validation\Rules\Password::defaults()],
+    ]);
 
-        event(new Registered($user));
+    // Ensure all fields are being set, including nullables
+    $user = User::create([
+        'first_name' => $validatedData['first_name'] ?? null,
+        'last_name' => $validatedData['last_name'] ?? null,
+        'date_of_birth' => $validatedData['date_of_birth'] ?? null,
+        'phone_number' => $validatedData['phone_number'] ?? null,
+        'email' => $validatedData['email'], // Required field
+        'address' => $validatedData['address'] ?? null,
+        'postcode' => $validatedData['postcode'] ?? null,
+        'city' => $validatedData['city'] ?? null,
+        'country' => $validatedData['country'] ?? null,
+        'password' => Hash::make($validatedData['password']),
+    ]);
 
-        Auth::login($user);
+    event(new Registered($user));
 
-        return redirect(RouteServiceProvider::HOME);
-    }
+    Auth::login($user);
+
+    return redirect(RouteServiceProvider::HOME);
+}
+
 }
