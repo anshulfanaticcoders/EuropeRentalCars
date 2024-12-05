@@ -12,7 +12,7 @@ import { Head } from '@inertiajs/vue3';
     
    <main>
        
-       <section class="bg-customPrimaryColor py-[2rem]">
+       <section class="bg-customPrimaryColor py-customVerticalSpacing">
             <div class="container py-customVerticalSpacing">
              <SearchBar class="border-[2px] rounded-[20px] border-white"/>
             </div>
@@ -20,7 +20,7 @@ import { Head } from '@inertiajs/vue3';
 
         
         <section>
-            <div class="container filters">
+            <div class="container filters py-customVerticalSpacing">
             <div class="column">
                 <FilterSlot/>
             </div>

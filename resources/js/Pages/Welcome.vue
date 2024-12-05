@@ -22,12 +22,12 @@ import {
 
 import categoryImage from "../../assets/categoryImage.jpeg";
 
-defineProps<{
-    canLogin?: boolean;
-    canRegister?: boolean;
-    laravelVersion: string;
-    phpVersion: string;
-}>();
+// defineProps<{
+//     canLogin?: boolean;
+//     canRegister?: boolean;
+//     laravelVersion: string;
+//     phpVersion: string;
+// }>();
 </script>
 
 <template>
