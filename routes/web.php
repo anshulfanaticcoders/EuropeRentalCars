@@ -42,6 +42,7 @@ Route::inertia('/','Welcome');
 Route::inertia('login','Login');
 Route::inertia('singlecar','SingleCar');
 Route::inertia('listing','Listing');
+Route::inertia('booking','Booking');
 
 
 require __DIR__.'/auth.php';

@@ -23,6 +23,7 @@ type Checked = DropdownMenuCheckboxItemProps['checked']
 const showStatusBar = ref<Checked>(true)
 const showActivityBar = ref<Checked>(false)
 const showPanel = ref<Checked>(false)
+
 </script>
 
 <template>
