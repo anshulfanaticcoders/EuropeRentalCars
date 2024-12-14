@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('car_reviews', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('car_id');
+            $table->bigInteger('review_author');
+            $table->string('review_text', 255);
             $table->timestamps();
         });
     }
