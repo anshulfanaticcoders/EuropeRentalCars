@@ -43,6 +43,7 @@ Route::inertia('login','Login');
 Route::inertia('singlecar','SingleCar');
 Route::inertia('listing','Listing');
 Route::inertia('booking','Booking');
+Route::inertia('vendor-register','VendorRegister');
 
 
 require __DIR__.'/auth.php';
