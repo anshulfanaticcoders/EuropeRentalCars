@@ -106,7 +106,7 @@ const form = useForm({
                 <!-- Step-3 -->
                 <div class="flex min-h-full justify-center flex-col gap-8" v-if="currentStep === 3">
                   <span class="text-[1.75rem] mb-[2rem]">Upload Your Documents</span>
-                    <!-- <input type="file" @input="form.driving_license = $event.target.files[0]" /> -->
+                    <input type="file" @input="form.driving_license = $event.target.files[0]" />
                      <progress v-if="form.progress" :value="form.progress.percentage" max="100">
                         {{ form.progress.percentage }}%
                       </progress>
